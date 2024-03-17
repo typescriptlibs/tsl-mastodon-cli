@@ -1,0 +1,43 @@
+# GitHub Pages config
+
+title: Mastodon CLI TypeScript Library
+description: TypeScript Library of the Mastodon CLI
+author: © TypeScriptLibs and Contributors
+
+email: bug@typescriptlibs.org
+github_username:  typescriptlibs
+rss: rss
+
+github:
+  private: true
+
+header_pages:
+  - www/downloads.md
+  - SECURITY.md
+  - LICENSE.md
+  - www/all-libraries.md
+
+include:
+  - LICENSE.md
+  - README.md
+  - SECURITY.md
+  - www/all-libraries.md
+  - www/downloads.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-titles-from-headings
+
+show_excerpts: false
+
+remote_theme: jekyll/minima
+
+minima:
+  date_format: "%Y-%m-%d"
+  skin: auto
+
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: true

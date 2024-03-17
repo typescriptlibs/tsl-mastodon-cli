@@ -1,0 +1,44 @@
+{
+    "author": "TypeScriptLibs and Contributers",
+    "description": "TypeScript Library of the Mastodon CLI",
+    "license": "MIT",
+    "name": "tsl-mastodon-cli",
+    "type": "module",
+    "version": "0.1.0",
+    "bin": "bin/tsl-mastodon-cli",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "bugs": "https://github.com/typescriptlibs/tsl-mastodon-cli/issues",
+    "homepage": "https://typescriptlibs.org/tsl-mastodon-cli/",
+    "repository": "https://github.com/typescriptlibs/tsl-mastodon-cli.git",
+    "devDependencies": {
+        "@typescriptlibs/amd": "^1.3.0",
+        "@typescriptlibs/tst": "^0.1.0",
+        "tsl-mastodon-api": "^0.5.0",
+        "tsl-mastodon-cli": "file:./",
+        "typescript": "~5.4.2"
+    },
+    "engines": {
+        "node": ">=18.16.0"
+    },
+    "files": [
+        "bin/",
+        "lib/",
+        "AUTHORS.md",
+        "CHANGELOG.md",
+        "LICENSE.md",
+        "README.md"
+    ],
+    "keywords": [
+        "Mastodon",
+        "TypeScript"
+    ],
+    "scripts": {
+        "build": "npm run clean && npm run build:lib",
+        "build:lib": "tsc -p src/tsconfig.json",
+        "clean": "rm -rf lib/ tst-run/",
+        "test": "npm run clean && npm run build && npm run test:run",
+        "test:run": "tst --reset --verbose tst/",
+        "watch": "npm run clean && tsc -p src/tsconfig.json --watch"
+    }
+}
