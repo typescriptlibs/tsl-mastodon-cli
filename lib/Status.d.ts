@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*\
 
   TypeScript Library of the Mastodon CLI
@@ -10,33 +9,9 @@
   You can get a copy of the License at https://typescriptlibs.org/LICENSE.txt
 
 \*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*/
-
-
-'use strict';
-
-
-/* *
- *
- *  Import
- *
- * */
-
-
-import * as CLI from '../lib/index.js';
-
-
-/* *
- *
- *  Runtime
- *
- * */
-
-
-try {
-    console.info( await CLI.run(
-        process.argv.slice( process.argv0 === 'node' ? 2 : 0 )
-    ) );
-} catch ( error ) {
-    console.error( error );
-    process.exit( 1 );
-}
+import * as Types from './Types.js';
+export declare function postStatus(context: Types.Context, args: Types.Arguments): Promise<string>;
+declare const _default: {
+    postStatus: typeof postStatus;
+};
+export default _default;

@@ -46,12 +46,12 @@ Examples
 --------
 
 ```Shell
-$ npx tsl-mastodon-cli \
+$ npx tsl-mastodon-cli post-status \
 --api 'https://mastodon.example/api/v1/' \
 --token 'ABC' \
 --media 'animation.gif' \
---spoiler 'Hello'
---text 'World'
+--text 'Hello, World!' \
+--visibiliy public
 ```
 
 

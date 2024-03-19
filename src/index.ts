@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*\
 
   TypeScript Library of the Mastodon CLI
@@ -12,31 +11,17 @@
 \*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*/
 
 
-'use strict';
-
-
 /* *
  *
- *  Import
+ *  Exports
  *
  * */
 
 
-import * as CLI from '../lib/index.js';
+export * from './CLI.js';
 
+export * as Status from './Status.js';
 
-/* *
- *
- *  Runtime
- *
- * */
+export * from './Types.js';
 
-
-try {
-    console.info( await CLI.run(
-        process.argv.slice( process.argv0 === 'node' ? 2 : 0 )
-    ) );
-} catch ( error ) {
-    console.error( error );
-    process.exit( 1 );
-}
+export * as Utilities from './Utilities.js';

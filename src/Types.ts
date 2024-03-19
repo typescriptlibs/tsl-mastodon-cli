@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*\
 
   TypeScript Library of the Mastodon CLI
@@ -12,31 +11,30 @@
 \*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*/
 
 
-'use strict';
-
-
 /* *
  *
- *  Import
+ *  Imports
  *
  * */
 
 
-import * as CLI from '../lib/index.js';
+import * as Mastodon from 'tsl-mastodon-api';
 
 
 /* *
  *
- *  Runtime
+ *  Declarations
  *
  * */
 
 
-try {
-    console.info( await CLI.run(
-        process.argv.slice( process.argv0 === 'node' ? 2 : 0 )
-    ) );
-} catch ( error ) {
-    console.error( error );
-    process.exit( 1 );
+export type Arguments = Record<string, ArgumentValue>;
+
+
+export type ArgumentValue = ( boolean | string | Array<( boolean | string )> );
+
+
+export interface Context {
+    api: Mastodon.API;
+    api2: Mastodon.API;
 }

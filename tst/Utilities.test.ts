@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*\
 
   TypeScript Library of the Mastodon CLI
@@ -12,31 +11,34 @@
 \*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*i*/
 
 
-'use strict';
+/* *
+ *
+ *  Imports
+ *
+ * */
+
+import * as CLI from 'tsl-mastodon-cli';
+
+import test from '@typescriptlibs/tst';
 
 
 /* *
  *
- *  Import
+ *  Tests
  *
  * */
 
 
-import * as CLI from '../lib/index.js';
+test( 'Utilities.extractArguments', async ( assert: test.Assert ) => {
 
+    const args = CLI.Utilities.extractArguments( [
+        '-z', '-z'
+    ] );
 
-/* *
- *
- *  Runtime
- *
- * */
+    assert.deepStrictEqual(
+        args.z,
+        [true, true],
+        '"z" argument should contain an array of booleans.'
+    );
 
-
-try {
-    console.info( await CLI.run(
-        process.argv.slice( process.argv0 === 'node' ? 2 : 0 )
-    ) );
-} catch ( error ) {
-    console.error( error );
-    process.exit( 1 );
-}
+} );
