@@ -1,4 +1,5 @@
 {
+    "private": true,
     "author": "TypeScriptLibs and Contributers",
     "description": "TypeScript Library of the Mastodon CLI",
     "license": "MIT",
