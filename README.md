@@ -21,7 +21,7 @@ Run the following command for usage in NPM projects:
 npm install tsl-mastodon-cli
 ```
 
-Run the following command for globlal installation:
+Run the following command for global installation:
 
 ```Shell
 npm install --global tsl-mastodon-cli
@@ -51,7 +51,7 @@ $ npx tsl-mastodon-cli post-status \
 --token 'ABC' \
 --media 'animation.gif' \
 --text 'Hello, World!' \
---visibiliy public
+--visibility public
 ```
 
 
@@ -60,7 +60,7 @@ Avaliable Options
 -----------------
 
 The available options are not settled yet.
-Please run `nxp tsl-mastodon-cli --help` to get the latest overview.
+Please run `npx tsl-mastodon-cli --help` to get the latest overview.
 
 
 
