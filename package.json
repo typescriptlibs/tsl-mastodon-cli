@@ -13,11 +13,11 @@
     "homepage": "https://typescriptlibs.org/tsl-mastodon-cli/",
     "repository": "https://github.com/typescriptlibs/tsl-mastodon-cli.git",
     "devDependencies": {
-        "@typescriptlibs/amd": "^1.3.0",
+        "@typescriptlibs/amd": "^1.3.1",
         "@typescriptlibs/tst": "^0.1.0",
-        "tsl-mastodon-api": "^0.5.0",
+        "tsl-mastodon-api": "^0.5.1",
         "tsl-mastodon-cli": "file:./",
-        "typescript": "~5.4.2"
+        "typescript": "~5.5.2"
     },
     "engines": {
         "node": ">=18.16.0"
