@@ -5,7 +5,7 @@
     "license": "MIT",
     "name": "tsl-mastodon-cli",
     "type": "module",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "bin": "bin/tsl-mastodon-cli",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
