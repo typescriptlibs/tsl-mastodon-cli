@@ -10,7 +10,7 @@
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "bugs": "https://github.com/typescriptlibs/tsl-mastodon-cli/issues",
-    "homepage": "https://typescriptlibs.org/tsl-mastodon-cli/",
+    "homepage": "https://typescriptlibs.eu/tsl-mastodon-cli/",
     "repository": "https://github.com/typescriptlibs/tsl-mastodon-cli.git",
     "devDependencies": {
         "@typescriptlibs/amd": "^1.3.1",
