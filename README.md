@@ -71,4 +71,4 @@ Links
 
 * [npmjs.com/package/tsl-mastodon-cli](https://www.npmjs.com/package/tsl-mastodon-cli)
 
-* [typescriptlibs.org](https://typescriptlibs.org/)
+* [typescriptlibs.eu](https://typescriptlibs.eu/)
